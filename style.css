@@ -1,0 +1,115 @@
+@font-face {
+    font-family: BiggerDisplay;
+    src: url(HelveticaNeueCondensedBlack.ttf);
+}
+
+@font-face {
+    font-family: Morganite;
+    src: url(Morganite-Black.ttf);
+}
+
+@font-face {
+    font-family: SmallerDisplay;
+    src: url(HelveticaNeue-Medium.otf);
+}
+
+@keyframes ScalingUp {
+    from {scale: 100%;}
+    tp {scale: 110%;}
+}
+
+@keyframes ScalingDown {
+    from {scale: 110%;}
+    tp {scale: 100%;}
+}
+
+html, body {
+    --Background_Color: #aa0011;
+    --TextColor: #111111;
+    background-color: var(--Background_Color);
+
+    margin: 0%;
+    margin-left: 1%;
+}
+
+.Artwork {
+    mix-blend-mode: multiply;
+    color: var(Background_Color);
+    
+    scale: 100%;
+
+    width: auto;
+    height: 20vw;
+
+    animation-name: ScalingDown;
+    animation-duration: .2s;
+}
+
+.Artwork:hover {
+    cursor: pointer;
+
+    scale: 110%;
+
+    mix-blend-mode: normal;
+    color: white;
+
+    animation-name: ScalingUp;
+    animation-duration: .2s;
+}
+
+.ImageContainer {
+    width: 80%;
+    height: auto;
+
+    display: flex;
+
+    column-gap: 0.5vw;
+    row-gap: 0.5vw;
+
+    margin-left: 0.5vw;
+}
+
+.sidebar {
+    position:fixed;
+    top: 0px;
+    left: 0px;
+
+    width: 2%;
+    height: 100%;
+
+    background-color: var(--TextColor);
+}
+
+.title {
+    font-size: 15vw;
+    color: var(--TextColor);
+
+    font-family: Morganite;
+
+    margin: 0%;
+    margin-top: -2vw;
+    margin-left: 5px;
+}
+
+.subtitle {
+    font-size: 5vw;
+    color: var(--TextColor);
+
+    font-family: Morganite;
+
+    margin: 0%;
+    margin-left: 5px;
+}
+
+p {
+    font-size: 2vw;
+    color: var(--TextColor);
+
+    font-family: SmallerDisplay;
+
+    margin: 0%;
+}
+
+hr {
+    color: var(--TextColor)
+}
