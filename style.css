@@ -15,12 +15,12 @@
 
 @keyframes ScalingUp {
     from {scale: 100%;}
-    tp {scale: 110%;}
+    to {scale: 105%;}
 }
 
 @keyframes ScalingDown {
-    from {scale: 110%;}
-    tp {scale: 100%;}
+    from {scale: 105%;}
+    to {scale: 100%;}
 }
 
 html, body {
@@ -34,31 +34,39 @@ html, body {
 
 .Artwork {
     mix-blend-mode: multiply;
-    color: var(Background_Color);
+    color: var(--Background_Color);
+    
+    position: relative;
     
     scale: 100%;
 
     width: auto;
     height: 20vw;
+    
+    z-index: 1;
 
     animation-name: ScalingDown;
     animation-duration: .2s;
 }
 
 .Artwork:hover {
+    position: relative;
+  
     cursor: pointer;
 
-    scale: 110%;
+    scale: 105%;
 
     mix-blend-mode: normal;
     color: white;
+    
+    z-index: 2;
 
     animation-name: ScalingUp;
     animation-duration: .2s;
 }
 
 .ImageContainer {
-    width: 80%;
+    width: 100%;
     height: auto;
 
     display: flex;
@@ -82,7 +90,7 @@ html, body {
 }
 
 .title {
-    font-size: 15vw;
+    font-size: 20vw;
     color: var(--TextColor);
 
     font-family: Morganite;
@@ -90,6 +98,8 @@ html, body {
     margin: 0%;
     margin-top: -2vw;
     margin-left: 5px;
+
+    margin-bottom: -3.9vw;
 }
 
 .subtitle {
@@ -100,15 +110,18 @@ html, body {
 
     margin: 0%;
     margin-left: 5px;
+    margin-bottom: -1.2vw;
 }
 
 p {
-    font-size: 2vw;
+    font-size: 3vw;
     color: var(--TextColor);
 
-    font-family: SmallerDisplay;
+    font-family: Morganite;
 
     margin: 0%;
+    margin-left: 5px;
+    margin-bottom: -0.9vw;
 }
 
 hr {
