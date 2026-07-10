@@ -3,6 +3,20 @@
     src: url(Morganite-Black.ttf);
 }
 
+html, body {
+    --Background_Color: #aa0011;
+    --TextColor: #101010;
+    background-color: var(--Background_Color);
+    background-image: url("Background.jpg");
+;
+    width: 100vw;
+    height: 100%;
+
+    margin: 0px;
+
+    overflow-x: hidden;
+}
+
 @keyframes ScalingUp {
     from {scale: 100%;}
     to {scale: 105%;}
@@ -13,32 +27,8 @@
     to {scale: 100%;}
 }
 
-.Background {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 500%;
-
-    mix-blend-mode: multiply;
-    z-index: 0;
-}
-
-html, body {
-    --Background_Color: #aa0011;
-    --TextColor: #101010;
-    background-color: var(--Background_Color);
-    background-image: url("Background.jpg");
-;
-    width: 100vw;
-    height: 100%;
-
-    overflow-x: hidden;
-}
-
 .Artwork {
-    border-radius: 10px;
+    border-radius: 5px;
     border: solid 1px var(--TextColor);
 
     max-height: 500px;
@@ -57,10 +47,12 @@ html, body {
     z-index: 1;
 
     animation-name: ScalingDown;
-    animation-duration: .2s;
+    animation-duration: .25s;
 }
 
 .Artwork:hover {
+    border: solid 1px #ffffff;
+
     cursor: pointer;
     scale: 105%;
 
@@ -68,11 +60,13 @@ html, body {
     z-index: 2;
 
     animation-name: ScalingUp;
-    animation-duration: .2s;
+    animation-duration: 0.05s;
 }
 
-.image_container {    
-    width: 100%;
+.image_container {
+    padding: 10px;
+
+    width: 90%;
     height: auto;
 
     display: flex;
@@ -80,6 +74,8 @@ html, body {
 
     column-gap: 10px;
     row-gap: 10px;
+
+    scroll-behavior:unset;
 }
 
 .image_box {
@@ -87,23 +83,37 @@ html, body {
     height: auto;
 }
 
-h1 {
-    font-size: 144px;
-    color: var(--TextColor);
-
-    font-family: Morganite;
-    margin-bottom: 0px;
+a {
+    text-decoration: none;
 }
 
 hr {
     color: var(--TextColor)
 }
 
-.end {
-    margin-top: 15px;
 
+h1 {
+    font-size: 144px;
+    color: var(--Background_Color);
+
+    font-family: Morganite;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 100px;
+    margin-right: 0px;
+}
+
+.Background {
     width: 100vw;
-    height:  250px;
+    height: 500px;
+
+    display: flex;
+    align-items: center;
 
     background-color: var(--TextColor);
+}
+
+.Background:hover {
+    cursor: pointer;
+    background-color: #ffffff;
 }

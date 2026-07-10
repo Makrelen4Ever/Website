@@ -1,0 +1,67 @@
+@font-face {
+    font-family: Morganite;
+    src: url(Morganite-Black.ttf);
+}
+
+html, body {
+    --Background_Color: #aa0011;
+    --TextColor: #111111;
+    background-color: var(--Background_Color);
+    background-image: url("Background.jpg");
+;
+    width: 100vw;
+    height: 100%;
+
+    margin: 0px;
+
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 100px;
+    margin-right: 0px;
+
+    font-family: Morganite;
+}
+
+.Button_text {
+    font-size: 144px;
+    color: var(--Background_Color);
+}
+
+.Title {
+    font-size: 270px;
+    color: var(--TextColor);
+}
+
+.Background2 {
+    width: 100vw;
+    height: 500px;
+
+    display: flex;
+    align-items: center;
+
+    background-color: #ffffff;
+    mix-blend-mode: multiply;
+}
+
+.Background {
+    width: 100vw;
+    height: 500px;
+
+    display: flex;
+    align-items: center;
+
+    background-color: var(--TextColor);
+}
+
+.Background:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+}
