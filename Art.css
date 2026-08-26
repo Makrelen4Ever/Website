@@ -31,7 +31,7 @@ html, body {
     border-radius: 5px;
     border: solid 1px var(--TextColor);
 
-    max-height: 500px;
+    max-height: 250px;
     max-width: 90vw;
 
     width: 100%;
